@@ -1,5 +1,5 @@
 "use client";
-
+import Services from "@/components/home/Services";
 import Link from "next/link";
 import { MouseEvent, useState } from "react";
 
@@ -117,7 +117,6 @@ export default function Home() {
                 <span>08/30</span>
               </div>
             </div>
-
             <div
               className="bankCard greenCard"
               style={{
@@ -235,6 +234,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Services />
 
       <style jsx>{`
         .home {

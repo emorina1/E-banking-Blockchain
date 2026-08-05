@@ -1,0 +1,538 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 90px 7%;
+  color: #ffffff;
+  background: #030303;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* Background */
+
+.grid {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+  opacity: 0.15;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+  background-size: 75px 75px;
+  mask-image: linear-gradient(to bottom, #000000, transparent);
+}
+
+.glowOne,
+.glowTwo {
+  position: absolute;
+  z-index: -3;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: glowMove 8s ease-in-out infinite;
+}
+
+.glowOne {
+  width: 420px;
+  height: 420px;
+  top: 10%;
+  right: 10%;
+  background: rgba(124, 54, 255, 0.22);
+}
+
+.glowTwo {
+  width: 360px;
+  height: 360px;
+  right: 28%;
+  bottom: -80px;
+  background: rgba(198, 255, 0, 0.14);
+  animation-delay: -4s;
+}
+
+/* Hero text */
+
+.heroText {
+  position: relative;
+  z-index: 5;
+  animation: contentEntrance 0.9s ease forwards;
+}
+
+.badge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 9px 15px;
+  border: 1px solid rgba(198, 255, 0, 0.28);
+  border-radius: 999px;
+  color: #c6ff00;
+  background: rgba(198, 255, 0, 0.05);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.heroText h1 {
+  max-width: 720px;
+  margin-bottom: 25px;
+  font-size: clamp(52px, 6vw, 86px);
+  line-height: 1;
+  letter-spacing: -4px;
+  font-weight: 600;
+}
+
+.heroText h1 span {
+  color: #c6ff00;
+}
+
+.heroText > p {
+  max-width: 610px;
+  margin-bottom: 36px;
+  color: #9d9d9d;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Buttons */
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.primary,
+.secondary {
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 26px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.primary {
+  color: #080a00;
+  background: #c6ff00;
+  box-shadow: 0 18px 50px rgba(198, 255, 0, 0.18);
+}
+
+.secondary {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-5px);
+}
+
+.secondary:hover {
+  border-color: rgba(198, 255, 0, 0.45);
+}
+
+/* Stats */
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stats h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.stats span {
+  color: #747474;
+  font-size: 11px;
+}
+
+/* Phone */
+
+.phoneContainer {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.bankCard {
+  position: relative;
+  width: 440px;
+  height: 270px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(198, 255, 0, 0.3),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #6c2ed8, #1c102e 65%, #0a0a0c);
+  box-shadow:
+    0 45px 90px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(112, 43, 220, 0.22);
+  transform: rotateY(-10deg) rotateX(5deg);
+  animation:
+    cardEntrance 1s ease forwards,
+    cardFloat 5s ease-in-out 1s infinite;
+  transition: transform 0.35s ease;
+}
+
+.bankCard:hover {
+  transform: rotateY(0deg) rotateX(0deg) translateY(-8px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTop h2 {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.contactless {
+  font-size: 22px;
+  letter-spacing: -6px;
+  transform: rotate(90deg);
+}
+
+.chip {
+  width: 53px;
+  height: 40px;
+  margin: 45px 0 23px;
+  border: 1px solid rgba(70, 55, 10, 0.4);
+  border-radius: 9px;
+  background: linear-gradient(135deg, #f0df95, #9c812d);
+}
+
+.cardNumber {
+  margin-bottom: 24px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cardBottom div:not(.cardCircles) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cardBottom span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cardBottom strong {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.cardCircles {
+  position: relative;
+  width: 63px;
+  height: 38px;
+}
+
+.cardCircles span {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.cardCircles span:last-child {
+  right: 0;
+  background: rgba(198, 255, 0, 0.6);
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(70px) rotateY(-18deg) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(-10deg) rotateX(5deg) scale(1);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .phoneContainer {
+    min-height: 380px;
+  }
+
+  .bankCard {
+    width: 330px;
+    height: 210px;
+    padding: 22px;
+  }
+
+  .chip {
+    width: 43px;
+    height: 32px;
+    margin: 28px 0 16px;
+  }
+
+  .cardNumber {
+    margin-bottom: 17px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .cardTop h2 {
+    font-size: 18px;
+  }
+
+  .cardBottom strong {
+    font-size: 9px;
+  }
+}
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 28px 20px;
+  overflow: hidden;
+  border-radius: 41px;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(124, 54, 255, 0.16),
+      transparent 30%
+    ),
+    #090a0d;
+}
+
+.screen::before {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 25px;
+  top: 0;
+  left: 50%;
+  border-radius: 0 0 16px 16px;
+  background: #000000;
+  transform: translateX(-50%);
+}
+
+.screen h2 {
+  margin: 35px 0 90px;
+  color: #c6ff00;
+  font-size: 21px;
+}
+
+.screen p {
+  margin-bottom: 9px;
+  color: #8a8a8a;
+  font-size: 11px;
+}
+
+.screen h1 {
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+/* Animations */
+
+@keyframes contentEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes phoneEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(80px) rotateY(-18deg) rotateX(10deg) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(-8deg) rotateX(4deg) scale(1);
+  }
+}
+
+@keyframes phoneFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -14px;
+  }
+}
+
+@keyframes glowMove {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(25px, -20px);
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseOrbit {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .hero {
+    padding-top: 130px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .heroText {
+    text-align: center;
+  }
+
+  .badge,
+  .heroText > p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .buttons,
+  .stats {
+    justify-content: center;
+  }
+
+  .phoneContainer {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 110px 20px 70px;
+  }
+
+  .heroText h1 {
+    font-size: 49px;
+    letter-spacing: -2px;
+  }
+
+  .heroText > p {
+    font-size: 16px;
+  }
+
+  .phoneContainer {
+    min-height: 520px;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText h1 {
+    font-size: 41px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+
+  .stats {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .phoneContainer {
+    width: 600px;
+    min-height: 460px;
+    margin-left: 50%;
+    transform: translateX(-50%) scale(0.62);
+  }
+}
