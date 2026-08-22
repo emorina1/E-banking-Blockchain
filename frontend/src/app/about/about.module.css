@@ -1,0 +1,86 @@
+.about {
+  min-height: 100vh;
+  padding: 140px 7% 100px;
+  color: white;
+  background: #030303;
+}
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto 90px;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #c6ff00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #c6ff00;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #929292;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.cards {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cards article {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: #0b0c10;
+  transition: 0.3s ease;
+}
+
+.cards article:hover {
+  transform: translateY(-8px);
+  border-color: rgba(198, 255, 0, 0.35);
+}
+
+.cards article > span {
+  color: #c6ff00;
+  font-size: 12px;
+}
+
+.cards h2 {
+  margin: 55px 0 15px;
+  font-size: 25px;
+}
+
+.cards p {
+  color: #888;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .about {
+    padding: 120px 20px 80px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

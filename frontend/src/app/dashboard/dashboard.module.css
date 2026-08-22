@@ -1,0 +1,257 @@
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  color: white;
+  background: #050608;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  min-height: 100vh;
+  padding: 110px 22px 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: #090a0d;
+}
+
+.logo {
+  margin-bottom: 45px;
+  color: #c6ff00;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav a {
+  padding: 13px 15px;
+  border-radius: 10px;
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+  color: #c6ff00;
+  background: rgba(198, 255, 0, 0.08);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+  padding: 120px 40px 40px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.topbar > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topbar span {
+  color: #858585;
+  font-size: 13px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c6ff00;
+  border-radius: 50%;
+  color: #c6ff00;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.balanceCard,
+.statCard {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: #0c0d11;
+}
+
+.balanceCard {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(198, 255, 0, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #5d25c5, #20102f);
+}
+
+.balanceCard span,
+.statCard span {
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.balanceCard h2 {
+  margin: 15px 0 8px;
+  font-size: 36px;
+}
+
+.balanceCard p {
+  color: #c6ff00;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.statCard h3 {
+  margin-top: 22px;
+  font-size: 30px;
+}
+
+/* =========================
+   TRANSACTIONS
+========================= */
+
+.transactions {
+  padding: 28px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: #0c0d11;
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.sectionTitle h2 {
+  font-size: 20px;
+}
+
+.sectionTitle a {
+  color: #c6ff00;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.transaction strong {
+  font-size: 14px;
+}
+
+.transaction span {
+  color: #737373;
+  font-size: 11px;
+}
+
+.income {
+  color: #c6ff00;
+}
+
+.expense {
+  color: #ff6774;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .balanceCard {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    padding: 120px 20px 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .balanceCard {
+    grid-column: auto;
+  }
+
+  .topbar h1 {
+    font-size: 24px;
+  }
+
+  .transactions {
+    padding: 22px 18px;
+  }
+
+  .transaction {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,138 @@
+.registerPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 70px;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(198, 255, 0, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(112, 40, 255, 0.12),
+      transparent 30%
+    ),
+    #030303;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+
+  background: #0b0c10;
+}
+
+.logo {
+  margin-bottom: 30px;
+  color: #c6ff00;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.label {
+  display: block;
+  margin-bottom: 15px;
+
+  color: #c6ff00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.card h1 {
+  margin-bottom: 14px;
+  font-size: 36px;
+}
+
+.card > p {
+  margin-bottom: 30px;
+  color: #888888;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  color: #d0d0d0;
+  font-size: 13px;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  outline: none;
+
+  color: #ffffff;
+  background: #131419;
+}
+
+.field input:focus {
+  border-color: #c6ff00;
+}
+
+.form button {
+  margin-top: 5px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  color: #080a00;
+  background: #c6ff00;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 25px;
+
+  color: #888888;
+  font-size: 13px;
+}
+
+.login a {
+  color: #c6ff00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 30px 22px;
+  }
+
+  .card h1 {
+    font-size: 30px;
+  }
+}

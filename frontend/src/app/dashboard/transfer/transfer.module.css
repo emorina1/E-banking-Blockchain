@@ -1,0 +1,207 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  color: #ffffff;
+  background: #050608;
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding: 110px 22px 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: #090a0d;
+}
+
+.logo {
+  margin-bottom: 45px;
+  color: #c6ff00;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav a {
+  padding: 13px 15px;
+  border-radius: 10px;
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+  color: #c6ff00;
+  background: rgba(198, 255, 0, 0.08);
+}
+
+.content {
+  padding: 120px 40px 40px;
+}
+
+.header {
+  margin-bottom: 35px;
+}
+
+.header > span {
+  color: #c6ff00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.header h1 {
+  margin: 10px 0;
+  font-size: 32px;
+}
+
+.header p {
+  max-width: 600px;
+  color: #858585;
+  line-height: 1.7;
+}
+
+.transferCard {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 25px;
+  max-width: 1100px;
+}
+
+.form,
+.summary {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: #0c0d11;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  color: #c5c5c5;
+  font-size: 13px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  outline: none;
+  color: #ffffff;
+  background: #131419;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #c6ff00;
+}
+
+.amountInput {
+  position: relative;
+}
+
+.amountInput > span {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #c6ff00;
+  transform: translateY(-50%);
+}
+
+.amountInput input {
+  padding-left: 35px;
+}
+
+.form button {
+  margin-top: 5px;
+  padding: 15px;
+  border: 0;
+  border-radius: 12px;
+  color: #080a00;
+  background: #c6ff00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.summary {
+  height: fit-content;
+}
+
+.summary > span {
+  display: block;
+  margin-bottom: 25px;
+  color: #c6ff00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.summary > div:not(.security) {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.summary p {
+  color: #858585;
+  font-size: 12px;
+}
+
+.summary strong {
+  font-size: 13px;
+}
+
+.security {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(198, 255, 0, 0.06);
+}
+
+.security span {
+  color: #c6ff00;
+}
+
+.security p {
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    padding: 120px 20px 30px;
+  }
+
+  .transferCard {
+    grid-template-columns: 1fr;
+  }
+}

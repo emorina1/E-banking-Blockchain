@@ -1,0 +1,150 @@
+.contact {
+  min-height: 100vh;
+  padding: 140px 7% 110px;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(198, 255, 0, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(112, 40, 255, 0.12),
+      transparent 30%
+    ),
+    #030303;
+}
+
+.hero {
+  max-width: 850px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #c6ff00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #c6ff00;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: auto;
+  color: #929292;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 35px;
+}
+
+.info {
+  display: grid;
+  gap: 18px;
+}
+
+.infoCard {
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.infoCard span {
+  display: block;
+  margin-bottom: 8px;
+  color: #7d7d7d;
+  font-size: 12px;
+}
+
+.infoCard strong {
+  font-size: 16px;
+}
+
+.form {
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: #0b0c10;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  color: #c7c7c7;
+  font-size: 13px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  outline: none;
+  color: white;
+  background: #121318;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #c6ff00;
+}
+
+.form button {
+  width: 100%;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 12px;
+  color: #080a00;
+  background: #c6ff00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 120px 20px 80px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
