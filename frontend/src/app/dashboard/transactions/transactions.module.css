@@ -175,6 +175,43 @@
 .expense {
   color: #ff6774;
 }
+.verifyArea {
+  display: flex;
+  align-items: center;
+}
+
+.verifyButton {
+  padding: 7px 14px;
+  border: 1px solid #c6ff00;
+  border-radius: 8px;
+  background: rgba(198, 255, 0, 0.08);
+  color: #c6ff00;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.verifyButton:hover {
+  background: #c6ff00;
+  color: #050608;
+}
+
+.verifyButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.verified {
+  color: #c6ff00;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.failed {
+  color: #ff5c5c;
+  font-size: 12px;
+  font-weight: 600;
+}
 
 @media (max-width: 900px) {
   .page {

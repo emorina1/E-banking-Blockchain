@@ -173,6 +173,26 @@
   font-size: 11px;
 }
 
+.logoutButton {
+  padding: 13px 15px;
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #8f8f8f;
+
+  text-align: left;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logoutButton:hover {
+  color: #ff7070;
+  background: rgba(255, 112, 112, 0.08);
+}
+
 @media (max-width: 900px) {
   .page {
     grid-template-columns: 1fr;
